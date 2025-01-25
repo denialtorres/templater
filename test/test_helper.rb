@@ -13,3 +13,12 @@ module ActiveSupport
     # Add more helper methods to be used by all tests here...
   end
 end
+
+require "capybara"
+require "capybara/rails"
+
+# Define a bare test case to use with capybara
+class ActiveSupport::IntegrationCase < ActiveSupport::TestCase
+  include Capybara::DSL
+  include Rails.application.routes.url_helpers
+end
