@@ -1,0 +1,2 @@
+class SqlTemplate < ApplicationRecord
+end

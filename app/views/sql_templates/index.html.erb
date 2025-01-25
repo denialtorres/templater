@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Sql templates" %>
+
+<h1>Sql templates</h1>
+
+<div id="sql_templates">
+  <% @sql_templates.each do |sql_template| %>
+    <%= render sql_template %>
+    <p>
+      <%= link_to "Show this sql template", sql_template %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New sql template", new_sql_template_path %>

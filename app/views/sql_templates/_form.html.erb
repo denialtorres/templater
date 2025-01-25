@@ -1,0 +1,47 @@
+<%= form_with(model: sql_template) do |form| %>
+  <% if sql_template.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(sql_template.errors.count, "error") %> prohibited this sql_template from being saved:</h2>
+
+      <ul>
+        <% sql_template.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :body, style: "display: block" %>
+    <%= form.textarea :body %>
+  </div>
+
+  <div>
+    <%= form.label :path, style: "display: block" %>
+    <%= form.text_field :path %>
+  </div>
+
+  <div>
+    <%= form.label :format, style: "display: block" %>
+    <%= form.text_field :format %>
+  </div>
+
+  <div>
+    <%= form.label :locale, style: "display: block" %>
+    <%= form.text_field :locale %>
+  </div>
+
+  <div>
+    <%= form.label :handler, style: "display: block" %>
+    <%= form.text_field :handler %>
+  </div>
+
+  <div>
+    <%= form.label :partial, style: "display: block" %>
+    <%= form.checkbox :partial %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

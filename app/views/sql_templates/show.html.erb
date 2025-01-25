@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @sql_template %>
+
+<div>
+  <%= link_to "Edit this sql template", edit_sql_template_path(@sql_template) %> |
+  <%= link_to "Back to sql templates", sql_templates_path %>
+
+  <%= button_to "Destroy this sql template", @sql_template, method: :delete %>
+</div>

@@ -1,0 +1,12 @@
+<% content_for :title, "Editing sql template" %>
+
+<h1>Editing sql template</h1>
+
+<%= render "form", sql_template: @sql_template %>
+
+<br>
+
+<div>
+  <%= link_to "Show this sql template", @sql_template %> |
+  <%= link_to "Back to sql templates", sql_templates_path %>
+</div>
